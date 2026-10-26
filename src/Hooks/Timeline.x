@@ -475,10 +475,6 @@ static BOOL ShouldHideTimelineItem(id item, BHTimelineFilterContext* context) {
         return NO;
     }
 
-    if (context.inConversation && [entryID hasPrefix:@"tweetdetailrelatedtweets"]) {
-        return YES;
-    }
-
     if (context.hideWhoToFollow && [entryID containsString:@"who-to-follow"]) {
         return YES;
     }
